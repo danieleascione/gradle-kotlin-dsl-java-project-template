@@ -31,8 +31,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
     testImplementation("org.assertj:assertj-core:$assertjVersion")
-    testImplementation("org.mockito:mockito-inline:$mockitoVersion")
-    testImplementation("mockito-junit-jupiter:$mockitoVersion")
+    testImplementation("org.mockito:mockito-core:$mockitoVersion")
 }
 
 sourceSets {
