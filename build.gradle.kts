@@ -1,37 +1,31 @@
-apply(from = "versions.gradle.kts")
-val junitVersion: String by extra
-val jetBrainsAnnotationsVersion: String by extra
-val assertjVersion: String by extra
-val mockitoVersion: String by extra
+import org.gradle.kotlin.dsl.`kotlin-dsl`
 
 plugins {
+    `kotlin-dsl`
     java
     application
     idea
 }
 
-group = "com.my-group"
-version = "1.0-SNAPSHOT"
-
 java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
-    }
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
-    mavenCentral()
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
-    implementation("org.jetbrains:annotations:$jetBrainsAnnotationsVersion")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
-
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
-    testImplementation("org.assertj:assertj-core:$assertjVersion")
-    testImplementation("org.mockito:mockito-core:$mockitoVersion")
+//    implemen  ¡¡tation("org.jetbrains:annotations:$jetBrainsAnnotationsVersion")
+//    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitVersion")
+//
+//    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
+//    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+//    testImplementation("org.assertj:assertj-core:$assertjVersion")
+//    testImplementation("org.mockito:mockito-core:$mockitoVersion")
+    // Testing
 }
 
 sourceSets {
